@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moeda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Moeda</h1>
+        <form method="post">
+            <label for="valor">Valor:</label>
+            <input type="number" name="valor" step="0.01" required>
+            
+            <label for="moeda_origem">Moeda de Origem:</label>
+            <select name="moeda_origem">
+                <option value="USD">Dólar (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">Libra Esterlina (GBP)</option>
+                <option value="BRL">Real (BRL)</option>
+                <option value="JPY">Yen Japonês (JPY)</option>
+                <option value="AUD">Dólar Australiano (AUD)</option>
+                <option value="CAD">Dólar Canadense (CAD)</option>
+                <option value="CHF">Franco Suíço (CHF)</option>
+                <option value="CNY">Yuan Chinês (CNY)</option>
+                <option value="INR">Rupia Indiana (INR)</option>
+                <option value="MXN">Peso Mexicano (MXN)</option>
+                <option value="RUB">Rúblia Russa (RUB)</option>
+                <option value="ZAR">Rand Sul-Africano (ZAR)</option>
+                <option value="SEK">Coroa Sueca (SEK)</option>
+                <option value="NOK">Coroa Norueguesa (NOK)</option>
+                <option value="KRW">Won Sul-Coreano (KRW)</option>
+                <option value="TRY">Lira Turca (TRY)</option>
+                <option value="SGD">Dólar de Singapura (SGD)</option>
+                <option value="HKD">Dólar de Hong Kong (HKD)</option>
+                <option value="PLN">Zloty Polonês (PLN)</option>
+                <option value="MYR">Ringgit Malaio (MYR)</option>
+                <option value="THB">Baht Tailandês (THB)</option>
+                <option value="IDR">Rupia Indonésia (IDR)</option>
+                <option value="BRL">Real Brasileiro (BRL)</option>
+                <option value="SAR">Riyal Saudita (SAR)</option>
+                <option value="AED">Dirham dos Emirados Árabes (AED)</option>
+                <option value="DKK">Coroa Dinamarquesa (DKK)</option>
+            </select>
+
+            <label for="moeda_destino">Moeda de Destino:</label>
+            <select name="moeda_destino">
+                <option value="USD">Dólar (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">Libra Esterlina (GBP)</option>
+                <option value="BRL">Real (BRL)</option>
+                <option value="JPY">Yen Japonês (JPY)</option>
+                <option value="AUD">Dólar Australiano (AUD)</option>
+                <option value="CAD">Dólar Canadense (CAD)</option>
+                <option value="CHF">Franco Suíço (CHF)</option>
+                <option value="CNY">Yuan Chinês (CNY)</option>
+                <option value="INR">Rupia Indiana (INR)</option>
+                <option value="MXN">Peso Mexicano (MXN)</option>
+                <option value="RUB">Rúblia Russa (RUB)</option>
+                <option value="ZAR">Rand Sul-Africano (ZAR)</option>
+                <option value="SEK">Coroa Sueca (SEK)</option>
+                <option value="NOK">Coroa Norueguesa (NOK)</option>
+                <option value="KRW">Won Sul-Coreano (KRW)</option>
+                <option value="TRY">Lira Turca (TRY)</option>
+                <option value="SGD">Dólar de Singapura (SGD)</option>
+                <option value="HKD">Dólar de Hong Kong (HKD)</option>
+                <option value="PLN">Zloty Polonês (PLN)</option>
+                <option value="MYR">Ringgit Malaio (MYR)</option>
+                <option value="THB">Baht Tailandês (THB)</option>
+                <option value="IDR">Rupia Indonésia (IDR)</option>
+                <option value="BRL">Real Brasileiro (BRL)</option>
+                <option value="SAR">Riyal Saudita (SAR)</option>
+                <option value="AED">Dirham dos Emirados Árabes (AED)</option>
+                <option value="DKK">Coroa Dinamarquesa (DKK)</option>
+            </select>
+
+            <button type="submit">Converter</button>
+        </form>
+
+        {% if resultado %}
+        <h2>Resultado: {{ resultado }}</h2>
+        {% endif %}
+
+        <a href="{{url_for('estatisticas')}}">
+            <button type="button">Gráficos</button>
+        </a>
+    </div>
+</body>
+</html>

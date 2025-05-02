@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatísticas de Conversões</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="b_estatisticas">
+    <h2 class="titulo_graficos">Estatísticas de Conversões</h2>
+
+    <img class="g_barras" src="data:image/png;base64,{{ grafico_bar }}" alt="Gráfico de Barras">
+    
+    <img class="g_pizza" src="data:image/png;base64,{{ grafico_pie }}" alt="Gráfico de Pizza">
+
+    <table class="d_conversoes" border="1">
+        <thead>
+            <tr>
+                <th>Moeda</th>
+                <th>Total de Conversões</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for moeda, total in dados_conversao %}
+                <tr>
+                    <td>{{ moeda }}</td>
+                    <td>{{ total }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+    <a href="/" class="v_pagina ">Voltar para a página principal</a>
+</body>
+</html>

@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #d8f0d4;
+}
+
+.container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 22px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+body.b_estatisticas {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.g_barras, .g_pizza {
+    width: 100%; 
+    max-width: 650px; 
+    height: auto;
+    margin: 20px auto;  
+}
+
+.d_conversoes {
+    width: 90%;  
+    max-width: 600px;  
+    margin: 30px auto;  
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+
+.d_conversoes th, .d_conversoes td {
+    padding: 10px;
+    text-align: left;
+}
+
+
+.v_pagina {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.titulo_graficos {
+    background-color: #28a745; 
+    color: white;             
+    padding: 10px;             
+    text-align: center;        
+    margin-bottom: 20px;              
+    font-size: 35px;           
+    font-weight: bold;        
+}
+
+@media (max-width: 768px) {
+    .g_barras, .g_pizza {
+        width: 100%; 
+        max-width: 100%; 
+        margin: 10px 0;
+    }
+
+    .d_conversoes {
+        width: 100%;  
+        margin: 20px 0;  
+    }
+
+    .v_pagina {
+        font-size: 16px; 
+        margin-top: 10px; 
+    }
+
+    .titulo_graficos{
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .v_pagina {
+        font-size: 14px; 
+    }
+
+    .titulo_graficos{
+        font-size: 18px;
+    }
+}
